@@ -130,13 +130,13 @@ void loop()
   // -----------------------------------------------------------------
   // DEVICE
   // -----------------------------------------------------------------
-if(millis()- lastUpdate > 5000){
+if(millis()- lastUpdate > 1000){
   lastUpdate = millis();
 
-  float h = dht.readHumidity();
+  humedad = dht.readHumidity();
   // Read temperature as Celsius (the default)
-  float t = dht.readTemperature();
-  log("[ DATA ] Humidity: " + String(h) + " % Temperature: "+ String(t) +"°C ");
+  temperatura = dht.readTemperature();
+  log("[ DATA ] Humidity: " + String(humedad) + " % Temperature: "+ String(temperatura) +"°C ");
 
 }
   // -------------------------------------------------------------------

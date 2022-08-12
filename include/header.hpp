@@ -33,6 +33,12 @@ String device_fw_version = ESCAPEQUOTE(BUILD_TAG);
 #define device_hw_version   "ADMINVUE32 v1 00000000"    // Versión del hardware
 #define device_manufacturer "WEBIOT"                    // Fabricante
 // -------------------------------------------------------------------
+// Zona variables del  Dispositivo
+// ------------------------------------------------------------------- 
+float temperatura;
+float humedad;
+
+// -------------------------------------------------------------------
 // Zona configuración Dispositivo [90]
 // ------------------------------------------------------------------- 
 boolean device_config_file;         // Identificador para archivo de configuración

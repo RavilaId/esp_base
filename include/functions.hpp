@@ -17,7 +17,7 @@
 // -------------------------------------------------------------------
 void WsMessage(String msg, String icon, String Type);
 String getSendJson(String msg, String type);
-
+String getSendDashboard(String msg, String type);
 // -------------------------------------------------------------------
 // Genera un log en el puerto Serial
 // -------------------------------------------------------------------

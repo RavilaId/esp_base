@@ -134,7 +134,8 @@ String getJsonIndex(){
 	DynamicJsonDocument jsonDoc(3000);
 	jsonDoc["type"] = "data";
 	jsonDoc["device_time_active"] = longTimeStr(millis() / 1000);
-	jsonDoc["device_ram_available"] = ESP.getFreeHeap();
+	jsonDoc["temperatura"] = temperatura;
+	jsonDoc["humedad"] = humedad;
 	jsonDoc["mqtt_online"] = mqttClient.connected() ? true : false;
 	jsonDoc["mqtt_server"] = mqttClient.connected() ? F(mqtt_server) : F("server not connected");
 	jsonDoc["wifi_online"] = WiFi.status() == WL_CONNECTED ? true : false;
@@ -151,7 +152,8 @@ String getJsonDashboard(){
 	DynamicJsonDocument jsonDoc(3000);
 	jsonDoc["type"] = "data";
 	jsonDoc["device_time_active"] = longTimeStr(millis() / 1000);
-	jsonDoc["device_ram_available"] = ESP.getFreeHeap();
+	jsonDoc["temperatura"] = temperatura;
+	jsonDoc["humedad"] = humedad;
 	jsonDoc["mqtt_online"] = mqttClient.connected() ? true : false;
 	jsonDoc["mqtt_server"] = mqttClient.connected() ? F(mqtt_server) : F("server not connected");
 	jsonDoc["wifi_online"] = WiFi.status() == WL_CONNECTED ? true : false;
