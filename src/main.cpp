@@ -136,7 +136,7 @@ if(millis()- lastUpdate > 1000){
   humedad = dht.readHumidity();
   // Read temperature as Celsius (the default)
   temperatura = dht.readTemperature();
-  log("[ DATA ] Humidity: " + String(humedad) + " % Temperature: "+ String(temperatura) +"°C ");
+  log("[ DATA ] Humidity: " + String(humedad,0) + " % Temperature: "+ String(temperatura,1) +" °C");
 
 }
   // -------------------------------------------------------------------
@@ -146,6 +146,6 @@ if(millis()- lastUpdate > 1000){
   {
     lastWsSend = millis();
     WsMessage(getJsonIndex(), "", "");
-    WsMessage(getJsonDashboard(), "", "");
+   // WsMessage(getJsonDashboard(), "", "");
   }
 }
