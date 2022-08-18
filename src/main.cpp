@@ -80,6 +80,8 @@ void setup()
   // Inicializo dispositivo
  // Controller.Init();
        dht.begin(); 
+// Setup Leds
+  settingPines();
   // Fin del Setup
   log("[ INFO ] Device Iniciado");
   // Setup WIFI
