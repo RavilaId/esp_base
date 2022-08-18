@@ -31,7 +31,7 @@
 #include "mqtt.hpp"
 #include "server.hpp"
 #include "websockets.hpp"
-#include "device.hpp"
+#include "Controller.hpp"
 
 
 #define DHTPIN 21    
@@ -78,7 +78,7 @@ void setup()
     settingsSave();
   }
   // Inicializo dispositivo
-  InitDevice();
+ // Controller.Init();
        dht.begin(); 
   // Fin del Setup
   log("[ INFO ] Device Iniciado");
@@ -146,6 +146,5 @@ if(millis()- lastUpdate > 1000){
   {
     lastWsSend = millis();
     WsMessage(getJsonIndex(), "", "");
-   // WsMessage(getJsonDashboard(), "", "");
   }
 }
