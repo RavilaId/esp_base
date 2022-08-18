@@ -80,6 +80,8 @@ void setup()
   // Inicializo dispositivo
   InitDevice();
        dht.begin(); 
+// Setup Leds
+  settingPines();
   // Fin del Setup
   log("[ INFO ] Device Iniciado");
   // Setup WIFI
@@ -146,6 +148,5 @@ if(millis()- lastUpdate > 1000){
   {
     lastWsSend = millis();
     WsMessage(getJsonIndex(), "", "");
-   // WsMessage(getJsonDashboard(), "", "");
   }
 }
